@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys
-from collections import Counter
+# from collections import Counter
 
 
 def frequent_kmer(text, length):
@@ -10,7 +10,7 @@ def frequent_kmer(text, length):
         kmers.setdefault(kmer, 0)
         kmers[kmer] += 1
 
-    kmers = Counter(kmers)
+    # kmers = Counter(kmers)
     return ' '.join([k for k, v in kmers.items() if v == max(kmers.values())])
 
 
